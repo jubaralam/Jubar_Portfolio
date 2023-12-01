@@ -5,7 +5,12 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { slideIn } from "../utils/motion";
+import  emailjs  from "@emailjs/browser";
 
+
+//emailjs tamplate id is:- template_n9l40dn 
+// emailjs service id is:- service_n4k7hlz
+//public key:- ch6g80_1GAcv3lbZP
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -14,9 +19,42 @@ const Contact = () => {
     message: "",
   });
 
-  const [loading, setLoadint] = useState(false);
-  const handleChange = (e) => {};
-  const handleSubmit = (e) => {};
+  const [loading, setLoading] = useState(false);
+  const handleChange = (e) => {
+const {name, value} = e.target;
+setForm({...form, [name]: value })
+
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true)
+
+    emailjs.send("service_n4k7hlz","template_n9l40dn",
+{
+  from_name: form.name,
+  to_name: "Jubar",
+  from_email: form.email,
+  to_email: "jubaralam11022@gmail.com",
+  message: form.message,
+
+},
+"ch6g80_1GAcv3lbZP"
+)
+.then(()=>{
+  setLoading(false);
+  alert("Thank You, I will get back to you as soon as possible.");
+  setForm({
+    name:"",
+    email:"",
+    message:""
+  })
+}, (error) =>{
+  setLoading(false);
+  console.log(error)
+  alert("Something Went Wrong")
+}
+)
+  };
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden  justify-center">
       <motion.div
