@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { fadeIn, textVariant } from "../utils/motion";
 import { testimonials } from "../constants";
-import {SectionWrapper } from '../hoc'
+import { SectionWrapper } from "../hoc";
 const FeedbackCard = ({
   index,
   testimonial,
@@ -29,10 +29,12 @@ const FeedbackCard = ({
             {designation} of {company}
           </p>
         </div>
-        <img src={image} alt={`feedback-by-${name}`}
-        className="w-10 h-10 rounded-full object-cover" />
+        <img
+          src={image}
+          alt={`feedback-by-${name}`}
+          className="w-10 h-10 rounded-full object-cover"
+        />
       </div>
-
     </div>
   </motion.div>
 );
@@ -43,7 +45,9 @@ const Feedbacks = () => {
         className={`${styles.padding} bg-tertiary rounded-2xl min-h-[300px]`}
       >
         <motion.div variants={textVariant()}>
-          <p className={styles.sectionSubText}>Currently Testimonials are just demo purpose only fulfill the design</p>
+          <p className={styles.sectionSubText}>
+            Currently Testimonials are just demo purpose only fulfill the design
+          </p>
           <h2 className={styles.sectionHeadText}>Testimonials.</h2>
         </motion.div>
       </div>
@@ -56,4 +60,4 @@ const Feedbacks = () => {
   );
 };
 
-export default  SectionWrapper(Feedbacks, "");
+export default SectionWrapper(Feedbacks, "");
