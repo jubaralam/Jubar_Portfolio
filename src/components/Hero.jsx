@@ -3,14 +3,15 @@ import React from "react";
 // import { slideIn } from "../utils/motion";
 // import {ComputersCanvas } from './canvas'
 import { styles } from "../styles";
+import { profile_pic } from "../assets";
 const Hero = () => {
   return (
     
     
-    <section className="relative w-full h-screen mx-auto">
-    
+    <section className=" flex relative w-full h-screen mx-auto ">
+ 
       <div
-        className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5 `}
+        className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5  `}
       >
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915eff]" />
@@ -32,8 +33,17 @@ const Hero = () => {
             Resume
           </button>
         </div>
-      </div>
       {/* Fixme: i have to fix 3d computer component <ComputersCanvas />  */}
+
+      <div className="flex flex-end border-2 bg-tertiary rounded-t-full shadow-xl  hover:drop-shadow-2xl mx-auto mt-5 ">
+        <img src={profile_pic} alt="Profile Picture" 
+        className="w-[250px]"
+        />
+        </div>
+
+
+    </div>
+
   
     </section>
   );
