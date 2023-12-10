@@ -70,7 +70,7 @@ setForm({...form, [name]: value })
           className="mt-12 flex flex-col gap-8"
         >
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4"> Your Name</span>
+            <span className="text-white font-medium mb-4" > Your Name</span>
             <input
               type="text"
               name="name"
@@ -78,6 +78,7 @@ setForm({...form, [name]: value })
               onChange={handleChange}
               placeholder="What's Your Name"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              required
             />
           </label>
           <label className="flex flex-col">
@@ -89,6 +90,7 @@ setForm({...form, [name]: value })
               onChange={handleChange}
               placeholder="What's Your Email"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              required
             />
           </label>
           <label className="flex flex-col">
@@ -100,6 +102,7 @@ setForm({...form, [name]: value })
               onChange={handleChange}
               placeholder="Leave Your Message"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              required
             />
           </label>
           <button
