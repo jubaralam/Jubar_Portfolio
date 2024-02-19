@@ -5,6 +5,11 @@ import React from "react";
 import { styles } from "../styles";
 import { profile_pic } from "../assets";
 const Hero = () => {
+
+  const resumeDownload =()=>{
+    alert(
+      "Thank you for visiting. My resume is currently being updated. Please check back later for the latest version.")
+  }
   return (
     
     
@@ -19,15 +24,16 @@ const Hero = () => {
         </div>
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            I'm <span className="text-[#915eff]">Jubar</span>
+            This is <span className="text-[#915eff]">Jubar</span>
           </h1>
           <p className={`${styles.heroSubText} text-white-100 mt-2 `}>
             {" "}
-            FrontEnd Developer <br className="sm:block hidden" /> React | Vite
+            MERN Stack Developer <br className="sm:block hidden" /> Frontend | Backend
           </p>
          
           <button
             type="submit"
+            onClick={resumeDownload}
             className="mt-7 bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
           >
             Resume
