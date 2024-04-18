@@ -26,8 +26,9 @@ import shaheen from "./company/shaheen.png";
 import samrudhh from "./company/samrudhh.png";
 // import tesla from "./company/tesla.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
+import sparkEnglish from "./sparkEnglish.jpg";
+import bluefly from "./bluefly.jpg";
+import url from "./url.png";
 import tripguide from "./tripguide.png";
 
 
@@ -54,8 +55,10 @@ export {
   tailwind,
   typescript,
   threejs,
-  carrent,
-  jobit,
+
   tripguide,
   profile_pic,
+  sparkEnglish,
+  bluefly,
+  url
 };
