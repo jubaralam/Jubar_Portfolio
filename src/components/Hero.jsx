@@ -5,16 +5,14 @@ import React from "react";
 import { styles } from "../styles";
 import { profile_pic } from "../assets";
 const Hero = () => {
-
-  const resumeDownload =()=>{
-    alert(
-      "Thank you for visiting. My resume is currently being updated. Please check back later for the latest version.")
-  }
+  const resumeDownload = () => {
+    window.open(
+      "https://drive.google.com/file/d/1ypFztdWl5rhXDATu7XjPvENLAIfG-ZxA/view?usp=sharing",
+      "_blank"
+    );
+  };
   return (
-    
-    
     <section className=" flex relative w-full h-screen mx-auto ">
- 
       <div
         className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5  `}
       >
@@ -28,9 +26,10 @@ const Hero = () => {
           </h1>
           <p className={`${styles.heroSubText} text-white-100 mt-2 `}>
             {" "}
-            MERN Stack Developer <br className="sm:block hidden" /> Frontend | Backend
+            MERN Stack Developer <br className="sm:block hidden" /> Frontend |
+            Backend
           </p>
-         
+
           <button
             type="submit"
             onClick={resumeDownload}
@@ -39,18 +38,12 @@ const Hero = () => {
             Resume
           </button>
         </div>
-      {/* Fixme: i have to fix 3d computer component <ComputersCanvas />  */}
+        {/* Fixme: i have to fix 3d computer component <ComputersCanvas />  */}
 
-      <div className="flex flex-end border-2 bg-tertiary rounded-t-full shadow-xl  hover:drop-shadow-2xl mx-auto mt-5 ">
-        <img src={profile_pic} alt="Profile Picture" 
-        className="w-[250px]"
-        />
+        <div className="flex flex-end border-2 bg-tertiary rounded-t-full shadow-xl  hover:drop-shadow-2xl mx-auto mt-5 ">
+          <img src={profile_pic} alt="Profile Picture" className="w-[250px]" />
         </div>
-
-
-    </div>
-
-  
+      </div>
     </section>
   );
 };
