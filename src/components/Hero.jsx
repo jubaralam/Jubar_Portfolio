@@ -7,7 +7,7 @@ import { profile_pic } from "../assets";
 const Hero = () => {
   const resumeDownload = () => {
     window.open(
-      "https://drive.google.com/file/d/1ypFztdWl5rhXDATu7XjPvENLAIfG-ZxA/view?usp=sharing",
+      "https://drive.google.com/file/d/1QunHE1y881idOVREd8sVVv7ZUgTLYlUW/view?usp=sharing",
       "_blank"
     );
   };
@@ -40,8 +40,8 @@ const Hero = () => {
         </div>
         {/* Fixme: i have to fix 3d computer component <ComputersCanvas />  */}
 
-        <div className="flex flex-end border-2 bg-tertiary rounded-t-full shadow-xl  hover:drop-shadow-2xl mx-auto mt-5 ">
-          <img src={profile_pic} alt="Profile Picture" className="w-[250px]" />
+        <div className="flex flex-end  bg-tertiary rounded-t-full shadow-xl  hover:drop-shadow-2xl mx-auto mt-5 ">
+          <img src={profile_pic} alt="Profile Picture" className="w-[250px] rounded-xl" />
         </div>
       </div>
     </section>

@@ -17,14 +17,12 @@ import {
   // docker,
   // starbucks,
   // tesla,
-
-
   tripguide,
   threejs,
   shaheen,
   samrudhh,
   sparkEnglish,
-  bluefly
+  bluefly,
 } from "../assets";
 
 export const navLinks = [
@@ -39,6 +37,10 @@ export const navLinks = [
   {
     id: "contact",
     title: "Contact",
+  },
+  {
+    id: "projects",
+    title: "Project",
   },
 ];
 
@@ -103,8 +105,6 @@ const technologies = [
     name: "git",
     icon: git,
   },
-
-
 ];
 
 const experiences = [
@@ -130,7 +130,6 @@ const experiences = [
     points: [
       "Installation and Maintenance: Skilled in installing and maintaining efficient cold room systems",
 
-
       " Troubleshooting Expert: Quickly diagnose and resolve refrigeration system issues.",
 
       "  Compliance and Safety: Ensure equipment meets industry standards and safety regulations.",
@@ -143,8 +142,6 @@ const experiences = [
       "Client Communication: Effectively communicate with clients on system usage and maintenance.",
     ],
   },
-
-
 ];
 
 const testimonials = [
@@ -219,6 +216,51 @@ const projects = [
     live_url: "https://bluefly-sigma.vercel.app/",
     source_code_link: "https://github.com/jubaralam/bluefly",
   },
+  {
+    name: "English Training Institute",
+    description:
+      "Web-based platform that allows users to search, book, appointment a convenient and efficient solution for English learner needs.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "JavaScript",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: sparkEnglish,
+    live_url: "https://spark-english-demo.vercel.app/",
+    source_code_link: "https://github.com/jubaralam/sparkEnglishDemo",
+  },
+  {
+    name: "English Training Institute",
+    description:
+      "Web-based platform that allows users to search, book, appointment a convenient and efficient solution for English learner needs.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "JavaScript",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: sparkEnglish,
+    live_url: "https://spark-english-demo.vercel.app/",
+    source_code_link: "https://github.com/jubaralam/sparkEnglishDemo",
+  },
+
   // {
   //   name: "Trip Guide",
   //   description:

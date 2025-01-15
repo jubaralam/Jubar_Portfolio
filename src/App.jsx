@@ -1,15 +1,17 @@
 import { BrowserRouter } from "react-router-dom";
 import {
-  About,
-  Contact,
-  Experience,
-  Feedbacks,
-  Hero,
+  //   About,
+  //   Contact,
+  //   Experience,
+  //   Feedbacks,
+  //   Hero,
   Navbar,
-  Tech,
-  Works,
-  StarsCanvas,
+  //   Tech,
+  //   Works,
+  //   StarsCanvas,
 } from "./components";
+
+import AllRoutes from "./routes/AllRoutes";
 
 const App = () => {
   return (
@@ -18,6 +20,13 @@ const App = () => {
         <div className="relative z-0 bg-primary">
           <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
             <Navbar />
+            <AllRoutes />
+          </div>
+        </div>
+        {/* <div className="relative z-0 bg-primary">
+          <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+            <Navbar />
+
             <Hero />
           </div>
 
@@ -30,7 +39,9 @@ const App = () => {
             <Contact />
             <StarsCanvas />
           </div>
-        </div>
+        </div> */}
+
+        
       </BrowserRouter>
     </>
   );
