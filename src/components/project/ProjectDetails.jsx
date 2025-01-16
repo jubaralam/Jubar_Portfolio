@@ -57,9 +57,9 @@ const ProjectDetails = () => {
   }
 
   return (
-    <div className="relative z-0 bg-primary min-h-screen">
+    <div className="relative z-0 bg-primary min-h-screen  ">
       <div
-        className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto  `}
+        className={`${styles.paddingX} relative inset-0 top-[120px] max-w-7xl mx-auto max-h-auto  `}
       >
         {/* Project Poster */}
         <div className="w-[70vw] text-center">
@@ -85,7 +85,7 @@ const ProjectDetails = () => {
         </div>
 
         {/* Screenshots Section */}
-        <div className="screenshots mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="screenshots mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 ">
           {project.screenshots.map((screenshot, index) => (
             <img
               key={index}

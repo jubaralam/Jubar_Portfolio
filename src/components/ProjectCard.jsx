@@ -4,16 +4,31 @@ import { Tilt } from "react-tilt";
 // import { styles } from "../styles";
 import { github } from "../assets";
 import { url } from "../assets";
-import { SectionWrapper } from "../hoc";
+// import { SectionWrapper } from "../hoc";
 // import { projects } from "../constants";
 import { fadeIn } from "../utils/motion";
-
+import { useNavigate } from "react-router-dom";
 const ProjectCard = (props) => {
-  const { index, name, description, tags, image, source_code_link, live_url } =
-    props;
-  console.log(tags);
+  const {
+    id,
+    index,
+    name,
+    description,
+    tags,
+    image,
+    source_code_link,
+    live_url,
+  } = props;
+
+  const navigate = useNavigate();
+  const redirectToDetailsPage = (id) => {
+    navigate(`/project/${id}`);
+  };
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div
+      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+      onClick={() => redirectToDetailsPage(id)}
+    >
       <Tilt
         options={{
           max: 45,

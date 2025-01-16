@@ -17,7 +17,7 @@ import {
   // docker,
   // starbucks,
   // tesla,
-  tripguide,
+  // tripguide,
   threejs,
   shaheen,
   samrudhh,
@@ -216,50 +216,7 @@ const projects = [
     live_url: "https://bluefly-sigma.vercel.app/",
     source_code_link: "https://github.com/jubaralam/bluefly",
   },
-  {
-    name: "English Training Institute",
-    description:
-      "Web-based platform that allows users to search, book, appointment a convenient and efficient solution for English learner needs.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "JavaScript",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: sparkEnglish,
-    live_url: "https://spark-english-demo.vercel.app/",
-    source_code_link: "https://github.com/jubaralam/sparkEnglishDemo",
-  },
-  {
-    name: "English Training Institute",
-    description:
-      "Web-based platform that allows users to search, book, appointment a convenient and efficient solution for English learner needs.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "JavaScript",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: sparkEnglish,
-    live_url: "https://spark-english-demo.vercel.app/",
-    source_code_link: "https://github.com/jubaralam/sparkEnglishDemo",
-  },
+  
 
   // {
   //   name: "Trip Guide",

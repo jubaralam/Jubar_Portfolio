@@ -1,7 +1,7 @@
 import React from "react";
 // import { Tilt } from "react-tilt";
 import Works from "../Works";
-import Navbar from "../Navbar";
+// import Navbar from "../Navbar";
 import ProjectCard from "../ProjectCard";
 import { projects } from "../../constants";
 import { styles } from "../../styles";
