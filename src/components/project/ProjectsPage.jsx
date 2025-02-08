@@ -13,7 +13,7 @@ const ProjectsPage = () => {
     <>
       <div className="relative z-0 bg-primary min-h-screen">
         <div className=" bg-cover bg-no-repeat bg-center">
-          <Works />
+         
           <section className=" flex relative w-full h-auto min-h-screen mx-auto overflow-hidden ">
             <div
               className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto  `}

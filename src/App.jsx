@@ -1,4 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
+
 import {
   //   About,
   //   Contact,
@@ -11,19 +12,23 @@ import {
   //   StarsCanvas,
 } from "./components";
 
+import "@mantine/core/styles.css";
+
+import { MantineProvider } from "@mantine/core";
 import AllRoutes from "./routes/AllRoutes";
 
 const App = () => {
   return (
     <>
-      <BrowserRouter>
-        <div className="relative z-0 bg-primary">
-          <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-            <Navbar />
-            <AllRoutes />
+      <MantineProvider>
+        <BrowserRouter>
+          <div className="relative z-0 bg-primary">
+            <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+              <Navbar />
+              <AllRoutes />
+            </div>
           </div>
-        </div>
-        {/* <div className="relative z-0 bg-primary">
+          {/* <div className="relative z-0 bg-primary">
           <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
             <Navbar />
 
@@ -40,9 +45,9 @@ const App = () => {
             <StarsCanvas />
           </div>
         </div> */}
-
-        
-      </BrowserRouter>
+        </BrowserRouter>
+      </MantineProvider>
+      ;
     </>
   );
 };
