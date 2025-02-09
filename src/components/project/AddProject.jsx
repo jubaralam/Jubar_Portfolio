@@ -19,6 +19,8 @@ const AddProject = () => {
       project_url: "",
       learnings: "",
       video_demo_link: "",
+      project_type: "",
+      stars: "",
     },
 
     validate: {
@@ -32,6 +34,9 @@ const AddProject = () => {
       learnings: (value) => (value.length < 2 ? "Invalid learnings" : null),
       video_demo_link: (value) =>
         value.length < 2 ? "Invalid video demo link" : null,
+      project_type: (value) =>
+        value.length < 2 ? "Invalid project type" : null,
+      
     },
   });
 
@@ -43,10 +48,7 @@ const AddProject = () => {
       formData.append(key, value);
     });
 
-    // Append the image file if selected
-    //   if (image) {
-    //     formData.append("image", image);
-    //   }
+    
     if (file) {
       formData.append("file", file); // Ensure this matches backend
     }
@@ -66,7 +68,6 @@ const AddProject = () => {
     }
   };
 
-  
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -96,10 +97,24 @@ const AddProject = () => {
             />
             <TextInput
               withAsterisk
-              label="status"
-              placeholder="status"
+              label="Status"
+              placeholder="i.e inprogress, pending,completed,deprecated,maintenance"
               key={form.key("status")}
               {...form.getInputProps("status")}
+            />
+            <TextInput
+              withAsterisk
+              label="project type"
+              placeholder="i.e frontend, backend, fullStach"
+              key={form.key("project_type")}
+              {...form.getInputProps("project_type")}
+            />
+            <TextInput
+              withAsterisk
+              label="stars"
+              placeholder="i.e 1,2,3,4,5"
+              key={form.key("stars")}
+              {...form.getInputProps("stars")}
             />
             <TextInput
               withAsterisk
@@ -138,11 +153,7 @@ const AddProject = () => {
             />
 
             {/* Image Upload Field */}
-            {/* <FileInput
-              label="Upload Project Thumbnail"
-              placeholder="Select an image"
-              onChange={setImage}
-            /> */}
+            
 
             <FileInput
               label="Upload Project Thumbnail"

@@ -16,19 +16,25 @@ import "@mantine/core/styles.css";
 
 import { MantineProvider } from "@mantine/core";
 import AllRoutes from "./routes/AllRoutes";
+import { CacheProvider } from "@emotion/react";
+
+import createCache from "@emotion/cache";
+
+const myCache = createCache({ key: "mantine", prepend: false });
 
 const App = () => {
   return (
     <>
-      <MantineProvider>
-        <BrowserRouter>
-          <div className="relative z-0 bg-primary">
-            <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-              <Navbar />
-              <AllRoutes />
+      <CacheProvider value={myCache}>
+        <MantineProvider>
+          <BrowserRouter>
+            <div className="relative z-0 bg-primary">
+              <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+                <Navbar />
+                <AllRoutes />
+              </div>
             </div>
-          </div>
-          {/* <div className="relative z-0 bg-primary">
+            {/* <div className="relative z-0 bg-primary">
           <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
             <Navbar />
 
@@ -45,9 +51,9 @@ const App = () => {
             <StarsCanvas />
           </div>
         </div> */}
-        </BrowserRouter>
-      </MantineProvider>
-      ;
+          </BrowserRouter>
+        </MantineProvider>
+      </CacheProvider>
     </>
   );
 };

@@ -7,7 +7,7 @@ import { profile_pic } from "../assets";
 const Hero = () => {
   const resumeDownload = () => {
     window.open(
-      "https://drive.google.com/file/d/1QunHE1y881idOVREd8sVVv7ZUgTLYlUW/view?usp=sharing",
+      "https://drive.google.com/file/d/1rYTPjIgYrE4J-M1KoBQEJiI-T4-wiqyo/view?usp=sharing",
       "_blank"
     );
   };
@@ -30,7 +30,6 @@ const Hero = () => {
             Backend
           </p>
 
-
           <button
             type="submit"
             onClick={resumeDownload}
@@ -42,7 +41,11 @@ const Hero = () => {
         {/* Fixme: i have to fix 3d computer component <ComputersCanvas />  */}
 
         <div className="flex flex-end  bg-tertiary rounded-t-full shadow-xl  hover:drop-shadow-2xl mx-auto mt-5 ">
-          <img src={profile_pic} alt="Profile Picture" className="max-w-[300px] rounded-xl" />
+          <img
+            src={profile_pic}
+            alt="Profile Picture"
+            className="max-w-[300px] rounded-xl"
+          />
         </div>
       </div>
     </section>
